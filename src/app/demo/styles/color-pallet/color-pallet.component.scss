@@ -1,0 +1,111 @@
+@import "@fourjs/ng-library/styles/variable.scss";
+
+.color-pallet {
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        .row {
+            justify-content: center;
+        }
+    }
+
+
+    .color-code {
+        width: rem(140);
+        display: inline-block;
+        vertical-align: top;
+
+        .palet {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        p {
+            text-align: center;
+            color: #000;
+            font-size: 10px;
+            min-height: rem(40);
+        }
+    }
+
+    .primary .palet {
+        background: $color-primary;
+    }
+
+    .primaryhover .palet {
+        background: $color-primaryhover;
+    }
+
+    .secondary .palet {
+        background: $color-secondary;
+    }
+
+    .secondaryhover .palet {
+        background: $color-secondaryhover;
+    }
+
+    .informational .palet {
+        background: $color-informational;
+    }
+
+    .informationalhover .palet {
+        background: $color-informationalhover;
+    }
+
+    .attention .palet {
+        background: $color-attention;
+    }
+
+    .attentionhover .palet {
+        background: $color-attentionhover;
+    }
+
+    .error .palet {
+        background: $color-error;
+    }
+
+    .errorhover .palet {
+        background: $color-errorhover;
+    }
+
+    .disabled .palet {
+        background: $color-disabled;
+    }
+
+    .light .palet {
+        background: $color-light;
+    }
+
+    .medium .palet {
+        background: $color-medium;
+    }
+
+    .dark .palet {
+        background: $color-dark;
+    }
+
+    .textstyle .palet {
+        background: $color-textstyle;
+    }
+
+    .background .palet {
+        background: $color-background;
+    }
+
+    .white {
+        background-color: transparent !important;
+
+        .palet {
+            background: $color-white;
+        }
+    }
+
+    .black {
+        background-color: transparent !important;
+
+        .palet {
+            background: $color-black;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import "@fourjs/ng-library/styles/functions.scss";
+
+.home-container {
+    width: 100%;
+    height: 100%;
+
+    .top-section {
+        width: 100%;
+        height: 22em;
+        background-image: url('../../assets/images/background.jpg');
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        left: 0;
+
+        .content {
+            padding: rem(80) 0 0 rem(80);
+
+            .text1 {
+                font-size: rem(40);
+                line-height: 1;
+            }
+
+            .text2 {
+                font-size: rem(25);
+                font-weight: 700;
+                line-height: 2
+            }
+        }
+    }
+
+    .get-started {
+        margin: rem(50) 0 0 rem(80);
+        font-weight: 700;
+        background-color: #fbd17b;
+        color: #b27800;
+        padding: rem(10) rem(15);
+        outline: 0;
+        border: 1px solid #ecd098;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+}

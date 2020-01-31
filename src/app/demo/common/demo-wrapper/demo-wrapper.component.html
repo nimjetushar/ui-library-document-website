@@ -1,0 +1,60 @@
+<div class="demo-wrapper row">
+  <div class="col-12">
+    <div class="component-header">{{header}}</div>
+    <div class="component-content">
+      <code class="code-sample" *ngIf="code" data-lang="html">
+        <span class="copy" (click)="copyToClipboard()">copy</span>
+        <code>
+          {{code}}
+        </code>
+      <!-- <span *ngFor="let item of codeEle" [class]="item.class">{{item.content}}</span> -->
+      </code>
+      <div class="code-output" #output [ngClass]="{'hide': enableOutput}">
+        <ng-content select="[output]"></ng-content>
+      </div>
+      <div class="code-doc" #ref [ngClass]="{'hide': enableDoc}">
+        <ng-content select="[doc]"></ng-content>
+      </div>
+      <div class="code-options" *ngIf="enableOptions">
+        <div class="header">{{componentType}} <b>{{name}}</b></div>
+        <!-- doc table -->
+        <div class="table">
+          <table *ngIf="docOptions">
+            <thead>
+              <th *ngFor="let col of docColumns" [style.width]="col?.width">{{col.label}}
+              </th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of docOptions">
+                <td *ngFor="let col of docColumns" [style.width]="col?.width"
+                  [class]="col.class">{{row[col.value] || '-'}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- method table -->
+          <table *ngIf="methodOptions" class="method-option">
+            <thead>
+              <th *ngFor="let col of methodColumns">{{col.label}}</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of methodOptions">
+                <td *ngFor="let col of methodColumns" [class]="col.class">
+                  <span
+                    *ngIf="col.value !== 'param'; else elseTpl">{{row[col.value]}}</span>
+                  <ng-template #elseTpl>
+                    <ul>
+                      <li *ngFor="let item of row[col.value]">
+                        {{item}}
+                      </li>
+                    </ul>
+                  </ng-template>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

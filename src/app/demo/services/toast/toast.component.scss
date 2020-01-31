@@ -1,0 +1,32 @@
+@import "../../../styles/variable.scss";
+
+.toast-component {
+    t-button button {
+        margin: 1rem 2rem;
+    }
+
+    .toast-types,
+    .toast-position,
+    .active-toast {
+        border-top: 1px solid $border-color-inside-doc;
+        margin-top: rem(20);
+        padding-top: rem(20);
+    }
+
+    .strong {
+        font-weight: bold;
+    }
+
+    .active-toast {
+        div.strong:nth-child(odd) {
+            background: #e5dddd;
+        }
+        div.strong {
+            padding: rem(6);
+        }
+    }
+
+    .sample-code {
+        margin-top: rem(10);
+    }
+}

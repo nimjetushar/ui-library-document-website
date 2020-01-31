@@ -1,0 +1,39 @@
+<div class="badge-component">
+  <demo-wrapper header="Buttons" [code]="compSyntax" [options]="options">
+    <div output>
+      <div class="row">
+        <div class="seperator col-sm-12 col-md-6 col-lg-4">
+          <h6 class="header">Primary Button</h6>
+          <t-button label="Primary" type="primary"></t-button>
+        </div>
+        <div class="seperator col-sm-12 col-md-6 col-lg-4">
+          <h6 class="header">Secondary Button</h6>
+          <t-button label="Secondary" type="secondary"></t-button>
+        </div>
+        <div class="seperator col-sm-12 col-md-6 col-lg-4">
+          <h6 class="header">Tertiary Button</h6>
+          <t-button label="Tertiary" type="tertiary"> </t-button>
+        </div>
+        <div class="seperator col-sm-12 col-md-6 col-lg-4">
+          <h6 class="header">Large Button</h6>
+          <t-button label="Home" type="primary" isLarge="true"></t-button>
+        </div>
+        <div class="seperator col-sm-12 col-md-6 col-lg-4 badge-btn">
+          <h6 class="header">Button with badge</h6>
+          <t-button label="Home" type="primary" badge="fa-home" badgePosition="right">
+          </t-button>
+          <t-button label="Home" type="primary" badge="fa-home" badgePosition="left">
+          </t-button>
+        </div>
+        <div class="seperator col-sm-12 col-md-6 col-lg-4">
+          <h6 class="header">Disabled</h6>
+          <t-button label="Home" type="primary" disabled="true"></t-button>
+        </div>
+      </div>
+    </div>
+    <div doc>
+      Note: For performance the component inputs are optimised so don't provide parameter
+      which are not required for proper functioning.
+    </div>
+  </demo-wrapper>
+</div>

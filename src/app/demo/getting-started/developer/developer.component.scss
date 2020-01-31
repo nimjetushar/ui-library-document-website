@@ -1,0 +1,43 @@
+.developer {
+  .content-center {
+    margin: 0 auto;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 15px;
+    margin-top: 2em;
+    border-radius: 2px;
+    background-color: #546e7a;
+    color: #fff;
+
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 32px;
+      margin-bottom: 8px;
+    }
+
+    .card-action {
+      border-top: 1px solid rgba(160, 160, 160, 0.2);
+      padding: 16px 0 0;
+
+      a {
+        color: #ffab40;
+        margin-right: 24px;
+        -webkit-transition: color .3s ease;
+        transition: color .3s ease;
+        text-transform: uppercase;
+
+        &:hover {
+          color: #ffd8a6;
+        }
+      }
+    }
+  }
+}

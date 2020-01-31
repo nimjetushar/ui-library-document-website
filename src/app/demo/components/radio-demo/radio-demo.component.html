@@ -1,0 +1,31 @@
+<div class="radio-component">
+    <demo-wrapper header="Radio button" [code]="compSyntax" [options]="options">
+        <div output>
+            <t-radio label="Radio" name="radio" [(model)]="individualVal"
+                (handleChange)="onGroupChange($event)"></t-radio>
+            <div class="group-radio">
+                <div>Group Radio button</div>
+                <t-radio label="Group A" name="group" [(model)]="groupVal" value="groupA"
+                    (handleChange)="onGroupChange($event)">
+                </t-radio>
+                <t-radio label="Group B" name="group" [(model)]="groupVal" value="groupB"
+                    (handleChange)="onGroupChange($event)">
+                </t-radio>
+                <t-radio label="Group C" name="group" [(model)]="groupVal" value="groupC"
+                    (handleChange)="onGroupChange($event)">
+                </t-radio>
+                <div class="grp-output" *ngIf="groupVal">
+                    <span>Selected Group: </span>
+                    <span>{{groupVal}}</span>
+                </div>
+            </div>
+            <t-radio label="disabled radio button" name="radio" disabled="true">
+            </t-radio>
+        </div>
+        <div doc>
+            Note: For performance the component inputs are optimised so don't provide
+            parameter
+            which are not required for proper functioning.
+        </div>
+    </demo-wrapper>
+</div>
