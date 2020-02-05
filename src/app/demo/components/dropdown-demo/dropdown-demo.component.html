@@ -1,1 +1,59 @@
-<t-dropdown placeholder="asdfasdf" [options]="options"></t-dropdown>
+<div class="dropdown-component">
+    <demo-wrapper header="Dropdown" [code]="compSyntax" [options]="pageOptions">
+        <div output>
+            <t-dropdown placeholder="Select option" [options]="options" [(ngModel)]="value" [filter]="true"
+                tooltip="afdsdfg">
+            </t-dropdown>
+            <div *ngIf="value" class="output">
+                <span>Output: </span>
+                <span>
+                    {{value}}
+                </span>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sx-12 section">
+                    <div class="title">Disabled Dropdown</div>
+                    <t-dropdown placeholder="Select option" [options]="options" [(ngModel)]="value" [disabled]="true">
+                    </t-dropdown>
+                </div>
+                <div class="col-md-6 col-sx-12 section">
+                    <div class="title">Read-only Dropdown</div>
+                    <t-dropdown placeholder="Select option" [options]="options" [(ngModel)]="value" [readonly]="true">
+                    </t-dropdown>
+                </div>
+                <div class="col-md-6 col-sx-12 section">
+                    <div class="title">Tooltip Dropdown</div>
+                    <div class="inline-block" style="margin: 0 10px 10px 0;">
+                        <t-dropdown placeholder="Select Tooltip position" [options]="tooltipOption"
+                            [(ngModel)]="tooltipPosition">
+                        </t-dropdown>
+                    </div>
+                    <div class="inline-block">
+                        <t-dropdown placeholder="Select option" [options]="options" [(ngModel)]="tooltipDDValue"
+                            [tooltip]="tooltip" [tooltipPosition]="tooltipPosition"
+                            (ngModelChange)="modelChangeHandler($event)">
+                        </t-dropdown>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sx-12 section">
+                    <div class="title">Focus and Blur</div>
+                    <div class="inline-block">
+                        <t-dropdown [options]="options" [autoDisplayFirst]="false" (onFocus)="focusHandler($event)"
+                            (onBlur)="blurHandler($event)">
+                        </t-dropdown>
+                        <span *ngIf="eventType" class="output" style="margin-left: 10px;">
+                            <span>Event: </span>
+                            <span>
+                                {{eventType}}
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div doc>
+            Note: For performance the component inputs are optimised so don't provide parameter
+            which are not required for proper functioning.
+        </div>
+    </demo-wrapper>
+</div>

@@ -9,6 +9,9 @@ import { NgLibrary } from '@fourjs/ng-library';
     CommonModule,
     NgLibrary
   ],
-  exports: [DemoWrapperComponent, NgLibrary]
+  exports: [
+    DemoWrapperComponent,
+    NgLibrary
+  ]
 })
 export class Common { }

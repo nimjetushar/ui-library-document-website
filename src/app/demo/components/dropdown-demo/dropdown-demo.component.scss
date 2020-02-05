@@ -1,0 +1,21 @@
+@import "@fourjs/ng-library/styles/variable.scss";
+
+.dropdown-component {
+    .output {
+        margin-top: 10px;
+        font-size : rem(16);
+    }
+
+    .row {
+        margin-top: 20px;
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size    : rem(16);
+            margin-bottom: 6px;
+        }
+    }
+}

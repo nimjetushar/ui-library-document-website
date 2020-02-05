@@ -1,4 +1,7 @@
-# UiLibraryDemo
+# Ui Library API documentation 
+
+[![Build Status](https://semaphoreci.com/api/v1/nimjetushar/ui-library-document-website/branches/master/shields_badge.svg)](https://semaphoreci.com/nimjetushar/ui-library-document-website)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/45ecdbaa8faf492cb26f270d7b741dee)](https://www.codacy.com/manual/tushar/ui-library-document-website?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nimjetushar/ui-library-document-website&amp;utm_campaign=Badge_Grade)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
