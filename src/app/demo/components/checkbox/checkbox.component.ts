@@ -49,8 +49,6 @@ export class CheckboxComponent {
   checkboxVal: boolean;
   modelValue: boolean = true;
 
-  constructor() { }
-
   handleChange(event: boolean): void {
     console.log(event);
     this.checkboxVal = event;

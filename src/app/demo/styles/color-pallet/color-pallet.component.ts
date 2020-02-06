@@ -5,7 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './color-pallet.component.html',
   styleUrls: ['./color-pallet.component.scss']
 })
-export class ColorPalletComponent {
-
-  constructor() { }
-}
+export class ColorPalletComponent { }

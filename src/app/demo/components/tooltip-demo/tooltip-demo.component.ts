@@ -8,7 +8,7 @@ import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
 })
 export class TooltipDemoComponent {
 
-  compSyntax: string = ` <span tooltip="content to be shown in the tooltip"
+  compSyntax: string = ` <span tTooltip="content to be shown in the tooltip"
   [tooltipDisabled]="false"
   [tooltipAnimation]="true"
   tooltipPlacement="bottom"
@@ -21,18 +21,18 @@ export class TooltipDemoComponent {
       {
         parameter: 'tooltip',
         type: 'string | TooltipContent',
-        desc: 'content to be displayed inside tooltip'
+        desc: 'Content to be displayed inside tooltip'
       },
       {
         parameter: 'tooltipDisabled',
         type: 'boolean',
-        desc: 'disables tooltip'
+        desc: 'Disable tooltip'
       },
       {
         parameter: 'tooltipAnimation',
         type: 'boolean',
         default: true,
-        desc: 'enable animation for tooltip'
+        desc: 'Enable animation for tooltip'
       },
       {
         parameter: 'tooltipPlacement',
@@ -42,7 +42,4 @@ export class TooltipDemoComponent {
       }
     ]
   };
-
-  constructor() { }
-
 }

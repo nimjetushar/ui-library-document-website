@@ -47,6 +47,10 @@ export class NavModel {
                     label: 'Checkbox',
                     route: 'component/checkbox'
                 },
+                {
+                    label: 'Dropdown',
+                    route: 'component/dropdown'
+                },
                 // {
                 //     label: 'Dynamic Fields',
                 //     route: 'component/dynamicFields'

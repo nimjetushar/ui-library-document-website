@@ -22,7 +22,7 @@ export class ButtonComponent {
       {
         parameter: 'type',
         type: 'string',
-        desc: 'Type of button to be rendered'
+        desc: 'Type of button, valid values are primary, secondary, tertiary'
       },
       {
         parameter: 'badge',
@@ -33,7 +33,7 @@ export class ButtonComponent {
         parameter: 'badgePosition',
         type: 'string',
         default: 'left',
-        desc: 'Shows badge based on specified position'
+        desc: 'Badge position in button, valid values are right, left'
       },
       {
         parameter: 'isLarge',
@@ -45,7 +45,7 @@ export class ButtonComponent {
         parameter: 'disabled',
         default: 'false',
         type: 'boolean',
-        desc: 'Disable button'
+        desc: 'Disabled button'
       }
     ]
   };

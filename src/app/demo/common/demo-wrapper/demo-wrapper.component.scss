@@ -4,24 +4,24 @@ $code-spacing: rem(35);
 $header-color: #ee6e73;
 
 .code-wrapper {
-    display: block;
-    width: 100%;
-    min-height: rem(30);
-    padding: rem(25);
-    margin: 1.5rem 0;
+    display         : block;
+    width           : 100%;
+    min-height      : rem(30);
+    padding         : rem(25);
+    margin          : 1.5rem 0;
     background-color: #f5f7fa;
-    color: #152935;
-    border: 1px solid #dfe3e6;
-    font-size: rem(18);
+    color           : #152935;
+    border          : 1px solid #cbced2;
+    font-size       : rem(18);
 }
 
 demo-wrapper {
     .component-header {
-        color: $header-color;
+        color      : $header-color;
         font-weight: 300;
-        font-size: rem(45);
+        font-size  : rem(45);
         line-height: 110%;
-        margin: rem(20) 0 rem(10) 0;
+        margin     : rem(20) 0 rem(10) 0;
     }
 
     h6.header {
@@ -34,25 +34,25 @@ demo-wrapper {
 
     .code-sample {
         @extend .code-wrapper;
-        position: relative;
-        width: 100%;
+        position  : relative;
+        width     : 100%;
         word-break: break-word;
 
         .copy {
-            position: absolute;
-            top: 0;
-            right: 0;
-            border-top: 0;
+            position    : absolute;
+            top         : 0;
+            right       : 0;
+            border-top  : 0;
             border-right: 0;
-            padding: 0 rem(10);
-            font-size: rem(15);
-            color: #a7a1a1;
-            cursor: pointer;
+            padding     : 0 rem(10);
+            font-size   : rem(15);
+            color       : #a7a1a1;
+            cursor      : pointer;
         }
 
         code {
             white-space: pre-line;
-            font-size: rem(16);
+            font-size  : rem(16);
         }
     }
 
@@ -63,14 +63,14 @@ demo-wrapper {
     .code-doc {
         @extend .code-wrapper;
         border-left: 3px solid #f11722;
-        word-break: break-word;
+        word-break : break-word;
     }
 
     .code-options {
         @extend .code-wrapper;
 
         .header {
-            font-size: rem(22);
+            font-size    : rem(22);
             margin-bottom: rem(10);
         }
 
@@ -79,6 +79,10 @@ demo-wrapper {
 
             table .desc td {
                 word-break: break-word;
+            }
+
+            tr:last-child {
+                border-color: #98999a;
             }
         }
 

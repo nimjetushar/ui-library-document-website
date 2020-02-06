@@ -14,7 +14,7 @@ export class DynamicFieldsDemoComponent {
 
   @ViewChild(DynamicFieldsComponent, { static: true }) dyFieldComp: DynamicFieldsComponent;
 
-  public compSyntax =
+  public compSyntax: string =
     `<t-dynamic-fields [fields]="field"
     [options]="option"
     (primaryHandler)="onSearch($event)"
@@ -64,8 +64,6 @@ export class DynamicFieldsDemoComponent {
   };
 
   output: any;
-
-  constructor() { }
 
   onSearch(param: { [key: string]: any }): void {
     console.log(param);

@@ -10,7 +10,6 @@ export class BadgeComponent implements OnInit {
 
   public compSyntax: string;
   public options: Options;
-  constructor() { }
 
   ngOnInit(): void {
     this.compSyntax = `<t-badge badge="fa-home"></t-badge> \n

@@ -47,8 +47,6 @@ export class RadioDemoComponent {
     ]
   };
 
-  constructor() { }
-
   onGroupChange(event: boolean | string): void {
     console.log(event);
   }
