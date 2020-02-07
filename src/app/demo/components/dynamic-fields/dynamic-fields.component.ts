@@ -1,8 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Options as DemoOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 import {
-  Fields, Options,
-  DynamicFieldsComponent
+  Fields, DynamicFieldsComponent, DynamicFieldOptions
 } from '@fourjs/ng-library';
 
 @Component({
@@ -44,7 +43,7 @@ export class DynamicFieldsDemoComponent {
     }
   ];
 
-  option: Options = {
+  option: DynamicFieldOptions = {
     dropdown: {
       brand: [
         {

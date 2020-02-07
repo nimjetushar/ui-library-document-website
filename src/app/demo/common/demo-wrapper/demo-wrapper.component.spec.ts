@@ -1,8 +1,8 @@
 import { ToastrService, ToastrModule } from 'ngx-toastr';
-import { ToastService } from 'projects/ui-library/src/lib/services/toast.service';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DemoWrapperComponent } from './demo-wrapper.component';
+import { ToastService } from '@fourjs/ng-library';
 
 describe('DemoWrapperComponent', () => {
   let component: DemoWrapperComponent;

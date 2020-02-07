@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DropdownDemoComponent } from './dropdown-demo.component';
+import { comModules } from '__test__/common.imports';
 
 describe('DropdownDemoComponent', () => {
   let component: DropdownDemoComponent;
@@ -8,9 +9,10 @@ describe('DropdownDemoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DropdownDemoComponent ]
+      declarations: [DropdownDemoComponent],
+      imports: [...comModules]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

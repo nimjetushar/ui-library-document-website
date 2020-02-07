@@ -1,16 +1,15 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { UiLibrary } from 'ui-library';
 import { Common } from './demo/common/common.module';
-import { Utility } from 'ui-library';
+import { NgLibrary, Utility } from '@fourjs/ng-library';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        UiLibrary,
+        NgLibrary,
         Common
       ],
       declarations: [
