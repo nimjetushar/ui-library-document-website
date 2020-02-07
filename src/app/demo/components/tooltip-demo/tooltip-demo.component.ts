@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
+import { Dropdown } from '@fourjs/ng-library';
 
 @Component({
   selector: 'app-tooltip-demo',
@@ -8,11 +9,10 @@ import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
 })
 export class TooltipDemoComponent {
 
-  compSyntax: string = ` <span tTooltip="content to be shown in the tooltip"
+  compSyntax: string = ` <div tTooltip="Content to be shown in the tooltip"
   [tooltipDisabled]="false"
   [tooltipAnimation]="true"
-  tooltipPlacement="bottom"
-  >Element on which tooltip is added  </span>`;
+  >Element on which tooltip is added  </div>`;
 
   options: Options = {
     name: 'tooltip',
@@ -38,8 +38,16 @@ export class TooltipDemoComponent {
         parameter: 'tooltipPlacement',
         type: 'top | bottom | left | right',
         default: 'bottom',
-        desc: 'tooltip placement'
+        desc: 'Tooltip placement'
       }
     ]
   };
+
+  tooltipOption: Dropdown[] = [
+    { label: 'top', value: 'top' },
+    { label: 'right', value: 'right' },
+    { label: 'bottom', value: 'bottom' },
+    { label: 'left', value: 'left' }
+  ];
+  tooltipPosition: string = 'top';
 }

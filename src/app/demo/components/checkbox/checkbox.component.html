@@ -1,18 +1,9 @@
 <div class="checkbox-component">
   <demo-wrapper header="Checkbox" [code]="compSyntax" [options]="options">
     <div output>
-      <t-checkbox label="Checkbox" name="checkbox" [(model)]="modelValue"
-        (handleChange)="handleChange($event)"></t-checkbox>
-      <div *ngIf="checkboxVal !== undefined" class="output">
-        <span>Output: </span>
-        <div>
-          <span>Event Emitter: </span>
-          <span>{{checkboxVal}}</span>
-        </div>
-        <div>
-          <span>Model: </span>
-          <span>{{modelValue}}</span>
-        </div>
+      <t-checkbox label="Checkbox" name="checkbox" [(model)]="modelValue"></t-checkbox>
+      <div *ngIf="modelValue !== undefined" class="output">
+        <span>Output: {{modelValue}}</span>
       </div>
       <div></div>
       <t-checkbox label="disabled checkbox" name="checkbox" disabled="true"></t-checkbox>

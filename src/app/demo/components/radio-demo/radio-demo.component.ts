@@ -11,7 +11,7 @@ export class RadioDemoComponent {
   groupVal: string = 'groupA';
   individualVal: boolean;
 
-  compSyntax: string = `<t-radio label="Radio" name="radio" [(model)]="model" (handleChange)="onChange($event)"></t-radio>`;
+  compSyntax: string = `<t-radio label="Radio" name="radio" [(model)]="model"></t-radio>`;
 
   options: Options = {
     name: 't-radio',
@@ -19,17 +19,12 @@ export class RadioDemoComponent {
       {
         parameter: 'label',
         type: 'string',
-        desc: 'radio button label'
-      },
-      {
-        parameter: 'model',
-        type: 'boolean | string',
-        desc: 'model value which changes on basis of radio button selection'
+        desc: 'Radio button label'
       },
       {
         parameter: 'name',
         type: 'string',
-        desc: 'radio button name'
+        desc: 'Radio button name'
       },
       {
         parameter: 'disabled',
@@ -37,17 +32,6 @@ export class RadioDemoComponent {
         type: 'boolean',
         desc: 'Disable component'
       }
-    ],
-    methods: [
-      {
-        method: 'handleChange',
-        param: ['event: boolean | string'],
-        desc: 'triggers event on radio value change'
-      }
     ]
   };
-
-  onGroupChange(event: boolean | string): void {
-    console.log(event);
-  }
 }
