@@ -14,10 +14,12 @@ export class DynamicFieldsDemoComponent {
   @ViewChild(DynamicFieldsComponent, { static: true }) dyFieldComp: DynamicFieldsComponent;
 
   public compSyntax: string =
-    `<t-dynamic-fields [fields]="field"
+    `<t-dynamic-fields 
+    [fields]="field"
     [options]="option"
     (primaryHandler)="onSearch($event)"
-    (secondaryHandler)="onReset($event)"></t-dynamic-fields>`;
+    (secondaryHandler)="onReset($event)"
+    ></t-dynamic-fields>`;
 
   public options: DemoOptions = {
     name: 't-dynamic-fields',

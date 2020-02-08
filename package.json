@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod --base-href /ui-lib/",
     "deploy": "npm run build && npm run move",
     "test": "ng test",
     "test-server": "ng test --watch=false --browsers=ChromeHeadless",

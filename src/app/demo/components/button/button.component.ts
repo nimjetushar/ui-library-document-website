@@ -49,4 +49,8 @@ export class ButtonComponent {
       }
     ]
   };
+
+  clickHandler(): void {
+    alert('button clicked !!!!');
+  }
 }

@@ -34,4 +34,8 @@ export class RadioDemoComponent {
       }
     ]
   };
+
+  clearRadio(): void {
+    this.individualVal = undefined;
+  }
 }

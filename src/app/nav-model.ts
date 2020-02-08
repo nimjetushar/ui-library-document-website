@@ -51,10 +51,10 @@ export class NavModel {
                     label: 'Dropdown',
                     route: 'component/dropdown'
                 },
-                // {
-                //     label: 'Dynamic Fields',
-                //     route: 'component/dynamicFields'
-                // },
+                {
+                    label: 'Dynamic Fields',
+                    route: 'component/dynamicFields'
+                },
                 {
                     label: 'Radio button',
                     route: 'component/radio'

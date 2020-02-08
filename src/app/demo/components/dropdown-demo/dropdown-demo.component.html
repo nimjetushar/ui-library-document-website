@@ -2,7 +2,7 @@
     <demo-wrapper header="Dropdown" [code]="compSyntax" [options]="pageOptions">
         <div output>
             <t-dropdown placeholder="Select option" [options]="options" [(ngModel)]="value" [filter]="true"
-                tooltip="afdsdfg">
+                [tooltip]="value">
             </t-dropdown>
             <div *ngIf="value" class="output">
                 <span>Output: </span>

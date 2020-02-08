@@ -2,6 +2,7 @@
     <demo-wrapper header="Radio button" [code]="compSyntax" [options]="options">
         <div output>
             <t-radio label="Radio" name="radio" [(model)]="individualVal"></t-radio>
+            <t-button type="primary" label="clear" (click)="clearRadio()"></t-button>
             <div class="group-radio">
                 <div>Group Radio button</div>
                 <t-radio label="Group A" name="group" [(model)]="groupVal" value="groupA">

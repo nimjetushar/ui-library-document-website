@@ -26,8 +26,8 @@
             </thead>
             <tbody>
               <tr *ngFor="let row of docOptions">
-                <td *ngFor="let col of docColumns" [style.width]="col?.width"
-                  [class]="col.class">{{row[col.value] || '-'}}
+                <td *ngFor="let col of docColumns" [style.width]="col?.width" [class]="col.class">
+                  {{row[col.value] || '-'}}
                 </td>
               </tr>
             </tbody>
@@ -40,8 +40,7 @@
             <tbody>
               <tr *ngFor="let row of methodOptions">
                 <td *ngFor="let col of methodColumns" [class]="col.class">
-                  <span
-                    *ngIf="col.value !== 'param'; else elseTpl">{{row[col.value]}}</span>
+                  <span *ngIf="col.value !== 'param'; else elseTpl">{{row[col.value]}}</span>
                   <ng-template #elseTpl>
                     <ul>
                       <li *ngFor="let item of row[col.value]">
