@@ -7,6 +7,7 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nimjetushar/ui-library-document-website)](https://dependabot.com)
 <br>
 [![GitHub license](https://img.shields.io/github/license/nimjetushar/ui-library-document-website)](https://github.com/nimjetushar/ui-library-document-website/blob/master/LICENSE)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/nimjetushar/ui-library-document-website)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
