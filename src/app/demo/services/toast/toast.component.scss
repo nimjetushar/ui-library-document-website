@@ -5,11 +5,50 @@
         margin: 1rem 2rem;
     }
 
+    .success {
+        button {
+            background-color: $color-success;
+
+            &:hover {
+                background-color: $color-successhover;
+            }
+        }
+    }
+
+    .error {
+        button {
+            background-color: $color-error;
+
+            &:hover {
+                background-color: $color-errorhover;
+            }
+        }
+    }
+
+    .info {
+        button {
+            background-color: $color-informational;
+
+            &:hover {
+                background-color: $color-informationalhover;
+            }
+        }
+    }
+
+    .warning {
+        button {
+            background-color: $color-attention;
+
+            &:hover {
+                background-color: $color-attentionhover;
+            }
+        }
+    }
+
     .toast-types,
-    .toast-position,
     .active-toast {
-        border-top: 1px solid $border-color-inside-doc;
-        margin-top: rem(20);
+        border-top : 1px solid $border-color-inside-doc;
+        margin-top : rem(20);
         padding-top: rem(20);
     }
 
@@ -21,12 +60,9 @@
         div.strong:nth-child(odd) {
             background: #e5dddd;
         }
+
         div.strong {
             padding: rem(6);
         }
-    }
-
-    .sample-code {
-        margin-top: rem(10);
     }
 }

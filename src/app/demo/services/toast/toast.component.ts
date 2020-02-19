@@ -10,14 +10,19 @@ import { ToastService } from '@fourjs/ng-library';
 })
 export class ToastComponent {
 
-  public options: Options = {
+  options: Options = {
     name: 'ToastService',
     componentType: 'Service',
     methods: [
       {
         method: 'show',
         param: ['params: ToastParameters'],
-        desc: 'Accepts ToastParameters and return ActiveToast<any>'
+        desc: 'Display single toast message'
+      },
+      {
+        method: 'showAll',
+        param: ['params: ToastParameters[]'],
+        desc: 'Display multiple toast message'
       }
     ],
     options: [
@@ -38,28 +43,10 @@ export class ToastComponent {
         desc: 'Specifies type of notification to show'
       },
       {
-        parameter: 'enableHtml',
-        type: 'boolean',
-        default: false,
-        desc: 'Html content within toast'
-      },
-      {
         parameter: 'timeOut',
         type: 'number',
-        default: '10000',
+        default: '4000',
         desc: 'Timeout for toast auto close'
-      },
-      {
-        parameter: 'extendedTimeOut',
-        type: 'boolean',
-        default: false,
-        desc: 'Disable both timeOut and extendedTimeOut'
-      },
-      {
-        parameter: 'disableTimeOut',
-        type: 'number',
-        default: '1000',
-        desc: 'Time to close after a user hovers over toast'
       },
       {
         parameter: 'closeButton',
@@ -68,116 +55,71 @@ export class ToastComponent {
         desc: 'Display close button'
       },
       {
-        parameter: 'toastComponent',
-        type: 'Component',
-        default: 'Toast',
-        desc: 'Angular component that will be used'
+        parameter: 'id',
+        type: 'any',
+        desc: 'Identifier of the toast'
       },
       {
-        parameter: 'easing',
-        type: 'string',
-        default: 'ease-in',
-        desc: 'Toast component easing'
-      },
-      {
-        parameter: 'easeTime',
-        type: 'string | number',
-        default: '300',
-        desc: 'Time spent easing'
-      },
-      {
-        parameter: 'progressBar',
+        parameter: 'sticky',
         type: 'boolean',
-        default: 'false',
-        desc: 'Show progress bar'
-      },
-      {
-        parameter: 'progressAnimation',
-        type: 'decreasing | increasing',
-        default: 'decreasing',
-        desc: 'Changes the animation of the progress bar'
-      },
-      {
-        parameter: 'positionClass',
-        type: 'string',
-        default: 'toast-top-right',
-        desc: 'Class on toast container'
-      },
-      {
-        parameter: 'tapToDismiss',
-        type: 'boolean',
-        default: 'true',
-        desc: 'Close on click'
-      },
-      {
-        parameter: 'onActivateTick',
-        type: 'boolean',
-        default: 'false',
-        desc: `Fires changeDetectorRef.detectChanges() when activated.
-        Helps show toast from asynchronous events outside of Angular's change detection`
-      },
-      {
-        parameter: 'titleClass',
-        type: 'string',
-        default: 'toast-title',
-        desc: 'Class inside toast on title'
-      },
-      {
-        parameter: 'messageClass',
-        type: 'string',
-        default: 'toast-message',
-        desc: 'Class inside toast on message'
+        desc: 'Whether the toast should be closed automatically based on life property or kept visible.'
       }
     ]
   };
 
-  public parameterCol: Column[] = [{
-    label: 'Properties',
-    value: 'property'
-  },
-  {
-    label: 'Description',
-    value: 'desc'
-  }];
+  toastPositions: string[] = ['top-right', 'top-left', 'bottom-right', 'bottom-left', 'top-center', 'bottom-center', 'center'];
+  toastComp: string = '<t-toast baseZIndex="1050" position="top-right"></t-toast>';
 
-  public paramData: { property: string, desc: string }[] = [
+  parameterCol: any[] = [
     {
-      property: 'toastId: number',
-      desc: 'Your Toast ID. Use this to close it individually'
+      label: 'Name',
+      value: 'name',
+      width: '20%'
     },
     {
-      property: 'message: string',
-      desc: 'message of your toast. Stored to prevent duplicates'
+      label: 'Type',
+      value: 'type',
+      width: '20%'
     },
     {
-      property: 'portal: ComponentRef<any>',
-      desc: 'reference to the component'
+      label: 'Default',
+      value: 'default',
+      width: '20%'
     },
     {
-      property: 'toastRef: ToastRef<any>',
-      desc: 'a reference to your toast'
+      label: 'Desc',
+      value: 'desc',
+      width: '40%'
+    }
+  ];
+
+  paramData: any[] = [
+    {
+      name: 'position',
+      type: 'string',
+      default: 'top-right',
+      desc: `Position of the component, valid values are "top-right", "top-left",
+       "bottom-left", "bottom-right", "top-center, "bottom-center" and "center".`
     },
     {
-      property: 'onShown: Observable<any>',
-      desc: 'triggered when toast is active'
-    },
-    {
-      property: 'onHidden: Observable<any>',
-      desc: 'triggered when toast is destroyed'
-    },
-    {
-      property: 'onTap: Observable<any>',
-      desc: 'triggered on toast click'
-    },
-    {
-      property: 'onAction: Observable<any>',
-      desc: 'available for your use in custom toast'
+      name: 'baseZIndex',
+      type: 'number',
+      default: 0,
+      desc: 'Base zIndex value to use in layering.'
     }
   ];
 
   constructor(private toastService: ToastService) { }
 
-  showToast(type: 'success' | 'error' | 'warning' | 'info'): void {
-    this.toastService.show({ title: 'Title', message: 'message', type, progressBar: true });
+  showToast(type: 'success' | 'error' | 'warn' | 'info'): void {
+    this.toastService.show({ title: 'Title', message: 'message', type, closeButton: true });
+  }
+
+  multipleToast(): void {
+    this.toastService.showMultiple([
+      { title: 'Title', message: 'message', type: 'success' },
+      { title: 'Title', message: 'message', type: 'warn' },
+      { title: 'Title', message: 'message', type: 'info' }
+    ]);
   }
 }

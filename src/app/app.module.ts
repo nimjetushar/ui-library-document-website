@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { UtilityComponent } from './demo/utility/utility.component';
 import { ReferenceComponent } from './demo/reference/reference.component';
 import { HomeComponent } from './home/home.component';
+import { ToastService } from '@fourjs/ng-library';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     Common
   ],
-  providers: [],
+  providers: [
+    ToastService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
