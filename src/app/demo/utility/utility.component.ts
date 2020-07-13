@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import Detect from 'tutility/build/detect';
+import Detect from 'tutility/detect';
 
 @Component({
   selector: 'app-utility',
