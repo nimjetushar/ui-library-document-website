@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Document / Api website for UI-library",
   "scripts": {
-    "postinstall": "npm install @fourjs/ng-library@latest --save",
+    "update": "npm install @fourjs/ng-library@latest tutility --save",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href /ui-lib/",
@@ -29,7 +29,7 @@
     "@angular/platform-browser": "9.1.1",
     "@angular/platform-browser-dynamic": "9.1.1",
     "@angular/router": "9.1.1",
-    "@fourjs/ng-library": "^20.7.13",
+    "@fourjs/ng-library": "20.7.13",
     "primeng": "9.0.5",
     "rxjs": "6.5.5",
     "tslib": "1.10.0",
