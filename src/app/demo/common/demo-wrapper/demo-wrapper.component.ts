@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 import { ToastService } from '@fourjs/ng-library';
 
-export interface Column {
+export interface IColumn {
   label: string;
   value: string;
 
@@ -12,24 +12,24 @@ export interface Column {
   width?: string;
 }
 
-interface DocOptions {
+interface IDocOptions {
   parameter: string;
   desc: string;
   type: string;
   default?: string | boolean;
 }
 
-interface MethodOptions {
+interface IMethodOptions {
   method: string;
   param: string[];
   desc: string;
 }
 
-export interface Options {
+export interface IOptions {
   name: string;
   componentType?: 'Service' | 'Component' | 'Directive';
-  options?: DocOptions[];
-  methods?: MethodOptions[];
+  options?: IDocOptions[];
+  methods?: IMethodOptions[];
 }
 
 @Component({
@@ -42,7 +42,7 @@ export interface Options {
 export class DemoWrapperComponent implements OnInit {
   @Input() header: string;
   @Input() code: string = '';
-  @Input() set options(docData: Options) {
+  @Input() set options(docData: IOptions) {
     if (docData) {
       this.enableOptions = true;
       this.name = docData.name;
@@ -63,17 +63,17 @@ export class DemoWrapperComponent implements OnInit {
   enableDoc: boolean = true;
   enableOptions: boolean;
   name: string;
-  docOptions: DocOptions[];
-  methodOptions: MethodOptions[];
+  docOptions: IDocOptions[];
+  methodOptions: IMethodOptions[];
   componentType: string = 'Component';
-  docColumns: Column[] = [
+  docColumns: IColumn[] = [
     { label: 'Name', value: 'parameter', width: '20%' },
     { label: 'Type', value: 'type', width: '20%' },
     { label: 'Default', value: 'default', width: '20%' },
     { label: 'Description', value: 'desc', width: '40%' }
   ];
 
-  methodColumns: Column[] = [
+  methodColumns: IColumn[] = [
     { label: 'Name', value: 'method', width: '20%' },
     { label: 'Parameters', value: 'param', width: '20%' },
     { label: 'Description', value: 'desc', width: '60%' }

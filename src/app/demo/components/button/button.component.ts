@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
+import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 
 @Component({
   selector: 'app-button',
@@ -9,9 +9,9 @@ import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
 })
 export class ButtonComponent {
 
-  public compSyntax: string = '<t-button label="Home" type="primary" badge="fa-home"></t-button>';
+  compSyntax: string = '<t-button label="Home" type="primary" badge="fa-home"></t-button>';
 
-  public options: Options = {
+  options: IOptions = {
     name: 't-button',
     options: [
       {

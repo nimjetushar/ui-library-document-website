@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Dropdown } from '@fourjs/ng-library';
-import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
+import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 
 @Component({
   selector: 'app-dropdown-demo',
@@ -11,7 +11,7 @@ export class DropdownDemoComponent {
 
   compSyntax: string = `<t-dropdown placeholder="Select option" [options]="options" [(ngModel)]="value" [filter]="true"></t-dropdown>`;
 
-  pageOptions: Options = {
+  pageOptions: IOptions = {
     name: 't-dropdown',
     options: [
       {

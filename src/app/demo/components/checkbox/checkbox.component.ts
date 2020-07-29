@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
+import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 
 @Component({
   selector: 'app-checkbox',
@@ -11,7 +11,7 @@ export class CheckboxComponent {
   compSyntax: string = `<t-checkbox name="checkbox" label="Checkbox" [(value)]="modelValue"></t-checkbox> \n
   <t-checkbox label="Checkbox" disabled="true"></t-checkbox>`;
 
-  public options: Options = {
+  options: IOptions = {
     name: 't-checkbox',
     options: [
       {

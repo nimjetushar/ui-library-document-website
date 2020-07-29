@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Options as DemoOptions } from '../../common/demo-wrapper/demo-wrapper.component';
+import { IOptions as DemoOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 import {
   DynamicFieldsComponent, DynamicFieldButtonOptions, DynamicFields,
   DynamicFieldDropdownOptions, DynamicFieldDisabledOptions
@@ -123,13 +123,13 @@ export class DynamicFieldsDemoComponent {
   displayOutput: boolean;
 
   onSearch(param: { [key: string]: any }): void {
-    console.log(param);
+    console.info(param);
     this.displayOutput = true;
     this.output = Object.assign({}, param);
   }
 
   onReset(param: { [key: string]: any }): void {
-    console.log(param);
+    console.info(param);
     this.output = {};
     this.dyFieldComp.reset();
   }

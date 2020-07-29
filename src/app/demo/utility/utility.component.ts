@@ -13,6 +13,6 @@ export class UtilityComponent {
   detecBrowserHandler(): void {
     const detect = new Detect();
     this.deviceDetail = detect.parse(navigator.userAgent);
-    console.log(this.deviceDetail);
+    console.info(this.deviceDetail);
   }
 }

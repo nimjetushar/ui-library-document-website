@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
+import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 import { Dropdown } from '@fourjs/ng-library';
 
 @Component({
@@ -14,7 +14,7 @@ export class TooltipDemoComponent {
   [tooltipAnimation]="true"
   >Element on which tooltip is added  </div>`;
 
-  options: Options = {
+  options: IOptions = {
     name: 'tooltip',
     componentType: 'Directive',
     options: [

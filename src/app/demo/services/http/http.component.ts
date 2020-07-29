@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
+import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 
 @Component({
   selector: 'app-http',
@@ -8,7 +8,7 @@ import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
 })
 export class HttpComponent {
 
-  public options: Options = {
+  options: IOptions = {
     name: 'HttpService',
     componentType: 'Service',
     methods: [

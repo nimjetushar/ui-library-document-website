@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
+import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 
 @Component({
   selector: 'app-badge',
@@ -8,8 +8,8 @@ import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
 })
 export class BadgeComponent implements OnInit {
 
-  public compSyntax: string;
-  public options: Options;
+  compSyntax: string;
+  options: IOptions;
 
   ngOnInit(): void {
     this.compSyntax = `<t-badge badge="fa-home"></t-badge> \n

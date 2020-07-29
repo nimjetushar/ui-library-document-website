@@ -1,4 +1,4 @@
-import { Options, Column } from './../../common/demo-wrapper/demo-wrapper.component';
+import { IOptions } from './../../common/demo-wrapper/demo-wrapper.component';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ToastService } from '@fourjs/ng-library';
 
@@ -10,7 +10,7 @@ import { ToastService } from '@fourjs/ng-library';
 })
 export class ToastComponent {
 
-  options: Options = {
+  options: IOptions = {
     name: 'ToastService',
     componentType: 'Service',
     methods: [

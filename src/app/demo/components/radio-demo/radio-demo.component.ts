@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Options } from '../../common/demo-wrapper/demo-wrapper.component';
+import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 
 @Component({
   selector: 'app-radio-demo',
@@ -13,7 +13,7 @@ export class RadioDemoComponent {
 
   compSyntax: string = `<t-radio label="Radio" name="radio" [(model)]="model"></t-radio>`;
 
-  options: Options = {
+  options: IOptions = {
     name: 't-radio',
     options: [
       {

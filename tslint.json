@@ -1,5 +1,6 @@
 {
   "extends": "@fourjs/tslint-rules",
+  "rules": {},
   "rulesDirectory": [
     "codelyzer"
   ]

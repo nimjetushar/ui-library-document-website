@@ -2,7 +2,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { Common } from './demo/common/common.module';
-import { NgLibrary, UTILITY } from '@fourjs/ng-library';
+import { NgLibrary } from '@fourjs/ng-library';
+import { sort, isDefined, deepCopy } from 'tutility/utils';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -25,9 +26,9 @@ describe('AppComponent', () => {
   });
 
   it('should test Utilility methods', () => {
-    expect(UTILITY.sort).toBeTruthy();
-    expect(UTILITY.deepCopy).toBeTruthy();
-    expect(UTILITY.isDefined).toBeTruthy();
+    expect(sort).toBeTruthy();
+    expect(deepCopy).toBeTruthy();
+    expect(isDefined).toBeTruthy();
   });
 
   it('should test sort method of UTILITY', () => {
@@ -39,11 +40,11 @@ describe('AppComponent', () => {
       { name: 'x - test item', price: '0', priority: 2, reviews: 249, rating: 0.5 }
     ];
 
-    let sortedList = UTILITY.sort(list, ['reviews', 'price']);
+    let sortedList = sort(list, ['reviews', 'price']);
     expect(sortedList[0].reviews).toEqual(11);
     expect(sortedList[0].price).toEqual('1.99');
 
-    sortedList = UTILITY.sort(list, ['price', 'reviews']);
+    sortedList = sort(list, ['price', 'reviews']);
     expect(sortedList[0].reviews).toEqual(249);
     expect(sortedList[0].price).toEqual('0');
   });
