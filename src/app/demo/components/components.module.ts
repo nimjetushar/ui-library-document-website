@@ -9,6 +9,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RadioDemoComponent } from './radio-demo/radio-demo.component';
 import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
 import { DropdownDemoComponent } from './dropdown-demo/dropdown-demo.component';
+import { ScrollTopDemoComponent } from './scroll-top-demo/scroll-top-demo.component';
 
 const routes: Routes = [
   { path: 'badge', component: BadgeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'radio', component: RadioDemoComponent },
   { path: 'tooltip', component: TooltipDemoComponent },
   { path: 'dropdown', component: DropdownDemoComponent },
+  { path: 'navigateTop', component: ScrollTopDemoComponent },
   {
     path: '',
     pathMatch: 'full',
@@ -33,7 +35,8 @@ const routes: Routes = [
     CheckboxComponent,
     RadioDemoComponent,
     TooltipDemoComponent,
-    DropdownDemoComponent
+    DropdownDemoComponent,
+    ScrollTopDemoComponent
   ],
   imports: [
     CommonModule,
