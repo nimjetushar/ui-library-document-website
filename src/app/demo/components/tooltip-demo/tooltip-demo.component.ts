@@ -9,10 +9,10 @@ import { Dropdown } from '@fourjs/ng-library';
 })
 export class TooltipDemoComponent {
 
-  compSyntax: string = ` <div tTooltip="Content to be shown in the tooltip"
-  [tooltipDisabled]="false"
-  [tooltipAnimation]="true"
-  >Element on which tooltip is added  </div>`;
+  compSyntax: string =
+    `<div tTooltip="Content to be shown in the tooltip" 
+              [tooltipDisabled]="false" 
+              [tooltipAnimation]="true"> Element on which tooltip is added </div>`;
 
   options: IOptions = {
     name: 'tooltip',

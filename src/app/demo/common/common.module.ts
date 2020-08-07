@@ -7,7 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { CommonNoteComponent } from './common-note/common-note.component';
 
 @NgModule({
-  declarations: [DemoWrapperComponent, CommonNoteComponent],
+  declarations: [
+    DemoWrapperComponent,
+    CommonNoteComponent
+  ],
   imports: [
     CommonModule,
     NgLibrary,
@@ -16,9 +19,10 @@ import { CommonNoteComponent } from './common-note/common-note.component';
   ],
   exports: [
     DemoWrapperComponent,
+    CommonNoteComponent,
     NgLibrary,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ]
 })
 export class Common { }

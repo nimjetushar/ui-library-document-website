@@ -13,6 +13,7 @@ $header-color: #ee6e73;
     color           : #152935;
     border          : 1px solid #cbced2;
     font-size       : rem(18);
+    border-radius   : 5px;
 }
 
 demo-wrapper {
@@ -37,17 +38,28 @@ demo-wrapper {
         position  : relative;
         width     : 100%;
         word-break: break-word;
+        padding   : 0;
+        margin    : 0;
+        background: #000;
 
         .copy {
             position    : absolute;
-            top         : 0;
-            right       : 0;
+            top         : 10px;
+            right       : 8px;
+            width       : 20px;
+            height      : 20px;
             border-top  : 0;
             border-right: 0;
             padding     : 0 rem(10);
             font-size   : rem(15);
-            color       : #a7a1a1;
+            color       : #fff;
             cursor      : pointer;
+
+            i {
+                position: absolute;
+                top     : 0;
+                right   : 0;
+            }
         }
 
         code {

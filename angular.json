@@ -29,9 +29,13 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/@fourjs/ng-library/styles.css"
+              "node_modules/@fourjs/ng-library/styles.css",
+              "node_modules/code-prettify/src/prettify.css",
+              "node_modules/code-prettify/styles/sunburst.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/code-prettify/src/prettify.js"
+            ]
           },
           "configurations": {
             "production": {

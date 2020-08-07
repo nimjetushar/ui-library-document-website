@@ -1,8 +1,10 @@
 import {
   Component, Input, OnInit, ViewEncapsulation,
-  ViewChild, ElementRef
+  ViewChild, ElementRef, AfterViewInit
 } from '@angular/core';
 import { ToastService } from '@fourjs/ng-library';
+
+declare var PR: any;
 
 export interface IColumn {
   label: string;
@@ -39,7 +41,7 @@ export interface IOptions {
   styleUrls: ['./demo-wrapper.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DemoWrapperComponent implements OnInit {
+export class DemoWrapperComponent implements OnInit, AfterViewInit {
   @Input() header: string;
   @Input() code: string = '';
   @Input() set options(docData: IOptions) {
@@ -84,6 +86,10 @@ export class DemoWrapperComponent implements OnInit {
   ngOnInit(): void {
     this.enableOutput = !this.outputWrapper.nativeElement.childNodes.length;
     this.enableDoc = !this.refWrapper.nativeElement.childNodes.length;
+  }
+
+  ngAfterViewInit(): void {
+    PR.prettyPrint();
   }
 
   copyToClipboard(): void {

@@ -22,7 +22,8 @@ export class ButtonComponent {
       {
         parameter: 'type',
         type: 'string',
-        desc: 'Type of button, valid values are primary, secondary, tertiary'
+        desc: 'Type of button, valid values are primary, secondary, tertiary',
+        default: 'primary'
       },
       {
         parameter: 'badge',

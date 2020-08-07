@@ -2,13 +2,12 @@
   <div class="col-12">
     <div class="component-header">{{header}}</div>
     <div class="component-content">
-      <code class="code-sample" *ngIf="code" data-lang="html">
-        <span class="copy" (click)="copyToClipboard()"><i class="fa fa-clone" aria-hidden="true"></i></span>
-        <code>
-          {{code}}
-        </code>
-      <!-- <span *ngFor="let item of codeEle" [class]="item.class">{{item.content}}</span> -->
-      </code>
+      <pre class="code-sample prettyprint" *ngIf="code" data-lang="html">
+        <div class="copy" (click)="copyToClipboard()">
+          <i class="fa fa-clone" aria-hidden="true"></i>
+        </div>
+        {{code}}
+      </pre>
       <div class="code-output" #output [ngClass]="{'hide': enableOutput}">
         <ng-content select="[output]"></ng-content>
       </div>
