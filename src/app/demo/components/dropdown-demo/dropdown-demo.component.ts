@@ -9,7 +9,7 @@ import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 })
 export class DropdownDemoComponent {
 
-  compSyntax: string = `<t-dropdown placeholder="Select option" [options]="options" [(ngModel)]="value" [filter]="true"></t-dropdown>`;
+  compSyntax: string[] = [`<t-dropdown placeholder="Select option" [options]="options" [(ngModel)]="value" [filter]="true"></t-dropdown>`];
 
   pageOptions: IOptions = {
     name: 't-dropdown',

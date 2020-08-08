@@ -8,12 +8,14 @@ import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 })
 export class BadgeComponent implements OnInit {
 
-  compSyntax: string;
+  compSyntax: string[];
   options: IOptions;
 
   ngOnInit(): void {
-    this.compSyntax = `<t-badge badge="fa-home"></t-badge> \n
-     <t-badge badge="fa-font-awesome"></t-badge>`;
+    this.compSyntax = [
+      `<t-badge badge="fa-home"></t-badge>`,
+      `<t-badge badge="fa-font-awesome"></t-badge>`
+    ];
 
     this.options = {
       name: 't-badge',

@@ -14,16 +14,9 @@ export class DynamicFieldsDemoComponent {
 
   @ViewChild(DynamicFieldsComponent, { static: true }) dyFieldComp: DynamicFieldsComponent;
 
-  compSyntax: string =
-    `<t-dynamic-fields 
-    [fields]="field"
-    [data]="data"
-    [dropdownOptions]="dropdownOptions"
-    [disabledFields]="disabledOptions"
-    [buttonOptions]="buttonOptions"
-    (primaryHandler)="onSearch($event)"
-    (secondaryHandler)="onReset($event)"
-    ></t-dynamic-fields>`;
+  compSyntax: string[] =
+    // tslint:disable-next-line: max-line-length
+    [`<t-dynamic-fields [fields]="field" [data]="data" [dropdownOptions]="dropdownOptions" [disabledFields]="disabledOptions" [buttonOptions]="buttonOptions" (primaryHandler)="onSearch($event)" (secondaryHandler)="onReset($event)" ></t-dynamic-fields>`];
 
   options: DemoOptions = {
     name: 't-dynamic-fields',

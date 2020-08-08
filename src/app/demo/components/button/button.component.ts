@@ -9,7 +9,7 @@ import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 })
 export class ButtonComponent {
 
-  compSyntax: string = '<t-button label="Home" type="primary" badge="fa-home"></t-button>';
+  compSyntax: string[] = ['<t-button label="Home" type="primary" badge="fa-home"></t-button>'];
 
   options: IOptions = {
     name: 't-button',

@@ -8,8 +8,11 @@ import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
 })
 export class CheckboxComponent {
 
-  compSyntax: string = `<t-checkbox name="checkbox" label="Checkbox" [(value)]="modelValue"></t-checkbox> \n
-  <t-checkbox label="Checkbox" disabled="true"></t-checkbox>`;
+  compSyntax: string[] =
+    [
+      `<t-checkbox name="checkbox" label="Checkbox" [(value)]="modelValue"></t-checkbox>`,
+      `<t-checkbox label="Checkbox" disabled="true"></t-checkbox>`
+    ];
 
   options: IOptions = {
     name: 't-checkbox',

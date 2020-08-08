@@ -2,12 +2,14 @@
   <div class="col-12">
     <div class="component-header">{{header}}</div>
     <div class="component-content">
-      <pre class="code-sample prettyprint" *ngIf="code" data-lang="html">
+      <div class="code-sample" *ngIf="code && code.length">
         <div class="copy" (click)="copyToClipboard()">
           <i class="fa fa-clone" aria-hidden="true"></i>
         </div>
-        {{code}}
-      </pre>
+        <pre *ngFor="let c of code">
+          <code class="prettyprint language-html">{{c}}</code>
+        </pre>
+      </div>
       <div class="code-output" #output [ngClass]="{'hide': enableOutput}">
         <ng-content select="[output]"></ng-content>
       </div>

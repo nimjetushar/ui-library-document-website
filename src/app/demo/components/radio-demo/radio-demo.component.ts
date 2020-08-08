@@ -11,7 +11,7 @@ export class RadioDemoComponent {
   groupVal: string = 'groupA';
   individualVal: boolean;
 
-  compSyntax: string = `<t-radio label="Radio" name="radio" [(model)]="model"></t-radio>`;
+  compSyntax: string[] = [`<t-radio label="Radio" name="radio" [(model)]="model"></t-radio>`];
 
   options: IOptions = {
     name: 't-radio',

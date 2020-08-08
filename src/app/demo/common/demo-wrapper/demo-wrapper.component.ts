@@ -43,7 +43,7 @@ export interface IOptions {
 })
 export class DemoWrapperComponent implements OnInit, AfterViewInit {
   @Input() header: string;
-  @Input() code: string = '';
+  @Input() code: string[];
   @Input() set options(docData: IOptions) {
     if (docData) {
       this.enableOptions = true;
@@ -95,7 +95,8 @@ export class DemoWrapperComponent implements OnInit, AfterViewInit {
   copyToClipboard(): void {
     const copyEle = document.createElement('input');
     document.body.appendChild(copyEle);
-    copyEle.setAttribute('value', this.code);
+    const codeSample = this.code.reduce((accumulator, currentValue) => accumulator + currentValue);
+    copyEle.setAttribute('value', codeSample);
     copyEle.select();
     document.execCommand('copy');
     document.body.removeChild(copyEle);

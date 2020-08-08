@@ -7,7 +7,7 @@ import { IOptions } from '../../common/demo-wrapper/demo-wrapper.component';
   styleUrls: ['./scroll-top-demo.component.scss']
 })
 export class ScrollTopDemoComponent implements AfterViewInit, OnDestroy {
-  compSyntax: string = `<t-navigate-top height="200"></t-navigate-top>`;
+  compSyntax: string[] = [`<t-navigate-top height="200"></t-navigate-top>`];
   options: IOptions = {
     name: 't-navigate-top',
     options: [

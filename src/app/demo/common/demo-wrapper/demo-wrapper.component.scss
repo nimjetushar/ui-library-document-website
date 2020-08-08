@@ -35,12 +35,20 @@ demo-wrapper {
 
     .code-sample {
         @extend .code-wrapper;
-        position  : relative;
-        width     : 100%;
-        word-break: break-word;
-        padding   : 0;
-        margin    : 0;
-        background: #000;
+        position   : relative;
+        width      : 100%;
+        word-break : break-word;
+        padding    : 0;
+        margin     : 0;
+        background : #000;
+        padding-top: 16px;
+
+        pre {
+            line-height: 1;
+            span {
+                line-height: 22px;
+            }
+        }
 
         .copy {
             position    : absolute;
