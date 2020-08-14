@@ -2,15 +2,39 @@
   <div class="setup">
     <demo-wrapper header="Setup">
       <div doc>
-        <ul class="caption browser-default">
-          <li>Download or clone the repo from
-            <a
-              href="https://github.com/nimjetushar/ui-lib.git">https://github.com/nimjetushar/ui-lib.git</a>
-          </li>
-          <li>Follow the process mentioned in README.md</li>
-          <li>Create the build for the UI library and import the package into required
-            project</li>
+        <div class="install-title">Install library</div>
+
+        <code class="code">npm i @fourjs/ng-library --save</code>
+        <br>
+        <div class="peer-dependency-title">Install peer dependencies.</div>
+        <code class="code">npm install primeng@{{primeDependency}} @angular/cdk@{{angularCdkDependency}} --save</code>
+        <br>
+        <span>
+          Import NgLibrary into @NgModule and also import dependent modules
+        </span>
+        <ul class="install-dependency">
+          <li>BrowserAnimationsModule</li>
+          <li>HttpClientModule</li>
+          <li>FormsModule</li>
         </ul>
+        <pre class="prettyprint lang-html">
+          <code>
+          import {{ '{' }} NgLibrary {{ '}' }}from '@fourjs/ng-library';
+
+          @NgModule({{ '{' }}
+              declarations: [],
+              imports: [
+                  NgLibrary,
+                  BrowserAnimationsModule,
+                  HttpClientModule,
+                  FormsModule,
+                  // other modules imports
+                  ...
+              ]
+              ...
+          {{ '}' }})
+          </code>
+        </pre>
       </div>
     </demo-wrapper>
   </div>

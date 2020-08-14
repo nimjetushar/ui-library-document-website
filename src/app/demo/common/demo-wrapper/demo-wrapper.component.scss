@@ -45,6 +45,7 @@ demo-wrapper {
 
         pre {
             line-height: 1;
+
             span {
                 line-height: 22px;
             }
@@ -96,6 +97,10 @@ demo-wrapper {
 
         .table {
             overflow-x: auto;
+
+            thead {
+                border-bottom: 2px solid #98999a;
+            }
 
             table .desc td {
                 word-break: break-word;

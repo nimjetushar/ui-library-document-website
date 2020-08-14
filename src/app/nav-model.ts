@@ -56,6 +56,10 @@ export class NavModel {
                     route: 'component/dynamicFields'
                 },
                 {
+                    label: 'Navigate to top',
+                    route: 'component/navigateTop'
+                },
+                {
                     label: 'Radio button',
                     route: 'component/radio'
                 },
