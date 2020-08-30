@@ -36,6 +36,10 @@ export class NavModel {
             badge: 'fa-slack',
             children: [
                 {
+                    label: 'Alert',
+                    route: 'component/alert'
+                },
+                {
                     label: 'Badge',
                     route: 'component/badge'
                 },

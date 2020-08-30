@@ -1,1 +1,32 @@
-<p>alert-demo works!</p>
+<div class="alert-component">
+    <demo-wrapper header="Alert" [code]="compSyntax" [options]="options">
+        <div output>
+            <div class="spacing">
+                <t-alert type="success" message="message........"></t-alert>
+            </div>
+            <div class="spacing">
+                <t-alert type="error" title="Title Error" message="message........"></t-alert>
+            </div>
+            <div class="spacing" *ngIf="!hideAlert">
+                <t-alert type="info" title="Title Info" message="message........" [enableClose]="true"
+                    (onCloseClick)="onClose($event)"></t-alert>
+            </div>
+            <div class="spacing">
+                <t-alert type="warn" title="Title warn" message="message........" [hideIcon]="true"></t-alert>
+            </div>
+            <div class="spacing dynamic-alert">
+                <div>Select Alert type from dropdown:-</div>
+                <div style="margin-bottom: 14px;">
+                    <t-dropdown placeholder="Select option" [options]="dropdownOption" [(ngModel)]="dropdownValue">
+                    </t-dropdown>
+                </div>
+                <div>
+                    <t-alert [type]="dropdownValue" title="Title {{dropdownValue}}" message="message........"></t-alert>
+                </div>
+            </div>
+        </div>
+        <div doc>
+            <app-common-note></app-common-note>
+        </div>
+    </demo-wrapper>
+</div>
