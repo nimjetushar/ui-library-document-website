@@ -66,10 +66,16 @@ export class NavModel {
                 {
                     label: 'Radio button',
                     route: 'component/radio'
-                },
+                }
+            ]
+        },
+        {
+            label: 'Directives',
+            badge: 'fa-compass',
+            children: [
                 {
                     label: 'Tooltip',
-                    route: 'component/tooltip'
+                    route: 'directive/tooltip'
                 }
             ]
         },

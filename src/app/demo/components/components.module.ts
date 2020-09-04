@@ -7,7 +7,6 @@ import { ButtonComponent } from './button/button.component';
 import { DynamicFieldsDemoComponent } from './dynamic-fields/dynamic-fields.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RadioDemoComponent } from './radio-demo/radio-demo.component';
-import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
 import { DropdownDemoComponent } from './dropdown-demo/dropdown-demo.component';
 import { ScrollTopDemoComponent } from './scroll-top-demo/scroll-top-demo.component';
 import { AlertDemoComponent } from './alert-demo/alert-demo.component';
@@ -18,14 +17,13 @@ const routes: Routes = [
   { path: 'dynamicFields', component: DynamicFieldsDemoComponent },
   { path: 'checkbox', component: CheckboxComponent },
   { path: 'radio', component: RadioDemoComponent },
-  { path: 'tooltip', component: TooltipDemoComponent },
   { path: 'dropdown', component: DropdownDemoComponent },
   { path: 'navigateTop', component: ScrollTopDemoComponent },
   { path: 'alert', component: AlertDemoComponent },
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'badge'
+    redirectTo: 'alert'
   }
 ];
 
@@ -36,7 +34,6 @@ const routes: Routes = [
     DynamicFieldsDemoComponent,
     CheckboxComponent,
     RadioDemoComponent,
-    TooltipDemoComponent,
     DropdownDemoComponent,
     ScrollTopDemoComponent,
     AlertDemoComponent
