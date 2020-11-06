@@ -29,7 +29,7 @@
     "@angular/platform-browser": "9.1.1",
     "@angular/platform-browser-dynamic": "9.1.1",
     "@angular/router": "9.1.1",
-    "@fourjs/ng-library": "20.7.30",
+    "@fourjs/ng-library": "20.10.6",
     "code-prettify": "0.1.0",
     "primeng": "9.0.5",
     "rxjs": "6.6.3",
