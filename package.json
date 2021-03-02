@@ -32,7 +32,7 @@
     "@fourjs/ng-library": "20.10.6",
     "code-prettify": "0.1.0",
     "primeng": "9.0.5",
-    "rxjs": "6.6.3",
+    "rxjs": "6.6.6",
     "tslib": "1.13.0",
     "tutility": "4.0.1",
     "zone.js": "0.10.3"
