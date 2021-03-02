@@ -31,7 +31,7 @@
     "@angular/router": "9.1.1",
     "@fourjs/ng-library": "20.10.6",
     "code-prettify": "0.1.0",
-    "primeng": "9.0.5",
+    "primeng": "11.2.3",
     "rxjs": "6.6.3",
     "tslib": "1.13.0",
     "tutility": "4.0.1",
